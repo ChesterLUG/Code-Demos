@@ -8,7 +8,7 @@ class Presentation
 end
 
 class Event
-  attr_reader :date, :title, :trip?
+  attr_reader :date, :title, :trip
 end
 
 class Person
