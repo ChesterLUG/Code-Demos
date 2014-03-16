@@ -38,9 +38,9 @@
 
         <section>
           <h2>What Git Does</h2>
-          <p style="padding-top: 1em;">Git tracks your files (in a good way, not the NSA way)</p>
-          <p style="padding-top: 1em;">Git maintains a history of files (with great power)</p>
-          <p style="padding-top: 1em;">Git provides clever collaboration (comes great responsibility)</p>
+          <p style="padding-bottom: 1em;">Git tracks your files (in a good way, not the NSA way)</p>
+          <p style="padding-bottom: 1em;">Git maintains a history of files (with great power)</p>
+          <p style="padding-bottom: 1em;">Git provides clever collaboration (comes great responsibility)</p>
         </section>
 
         <section>
@@ -73,26 +73,26 @@
           <h2>Without Git</h2>
           <p class="fragment" style="font-weight: bold">You have lots of files</p>
             <p class="fragment" style="font-style: italic">Code, documents, designs, preferences/settings, whatever</p>
-          <p class="fragment" style="font-weight: bold">You change them</p>
+          <p class="fragment" style="font-weight: bold; padding-top: 1em;">You change them</p>
             <p class="fragment" style="font-style: italic">You hope that you don't need the old version anymore</p>
-          <p class="fragment" style="font-weight: bold">You realise there should be a better way</p>
-            <p class="fragment" style="font-style: italic">You want to keep a history of your work and other people's</p>
+          <p class="fragment" style="font-weight: bold; padding-top: 1em;">You realise there should be a better way</p>
+            <p class="fragment" style="font-style: italic">You want to keep a history of your work (and that of other people)</p>
         </section>
 
         <section>
           <h2>Workflow (1)</h2>
           <ol>
             <li>create a new directory, with Git tracking
-              <pre><code data-trim>git init ${directory}</code></pre>
+              <pre><code data-trim>git init #{directory}</code></pre>
             </li>
             <li>create some files
-              <pre><code data-trim>vim ${files}</code></pre>
+              <pre><code data-trim>vim #{files}</code></pre>
             </li>
-            <li>add some files
-              <pre><code data-trim>git add ${files}</code></pre>
+            <li>add some changes
+              <pre><code data-trim>git add #{files}</code></pre>
             </li>
             <li>commit your changes
-              <pre><code data-trim>git commit -m "${message}"</code></pre>
+              <pre><code data-trim>git commit -m "#{message}"</code></pre>
             </li>
           </ol>
         </section>
@@ -101,15 +101,12 @@
           <h2>Workflow (2)</h2>
           <ol>
             <li>change some files
-              <pre><code data-trim>vim ${files}</code></pre>
-            </li>
-            <li>check your repo
-              <pre><code data-trim>git status</code></pre>
+              <pre><code data-trim>vim #{files}</code></pre>
             </li>
             <li>commit your changes
-              <pre><code data-trim>git add ${files}</code><code data-trim>git commit -m "${message}"</code></pre>
+              <pre><code data-trim>git add #{files}</code><code data-trim>git commit -m "#{message}"</code></pre>
             </li>
-            <li>check your repo
+            <li>check other changes
               <pre><code data-trim>git status</code></pre>
             </li>
           </ol>
