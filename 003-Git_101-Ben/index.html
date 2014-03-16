@@ -134,29 +134,43 @@
 
         <section>
           <h2>Branches</h2>
-          <p>You commit everything, but you're ot sure what you want to "commit to"</p>
-          <p>Software development comprises features, bugfixes, releases</p>
-          <p>Separate changes to independent codebases</p>
+          <p><strong>Every commit is on a branch.</strong></p>
+          <p>Use them, you already are anyway.</p>
+          <p style="padding-top: 1em;"><em>You commit, but you're not sure what you want to "commit to"</em></p>
+          <p>Branches separate independent streams of changes</p>
           <pre><code data-trim>git branch</code><code data-trim>git checkout</code></pre>
         </section>
 
         <section>
           <h2>Remotes</h2>
-          <p>Git is, for a single user, client-server: backup</p>
-          <p>Git is, for multiple users, distributed: sharing</p>
-          <p>Multiple remote repositories can be used together</p>
-          <pre><code data-trim>git remote -v</code><code data-trim>git add ${name} ${url}</code></pre>
+          <p class="fragment" style="padding-bottom: 1em;">Remotes are serving repositories<br /><em>(local / SSH / Git / HTTP[S])</em></p>
+          <p class="fragment" style="padding-bottom: 1em;">Git is distributed<br /><em>(you work locally, and periodically use remotes)</em></p>
+          <p class="fragment">Git is decentralised<br /><em>(multiple remotes can be used independently)</em></p>
         </section>
 
         <section>
-          <h2>Pushing / Pulling</h2>
+          <h2>Remotes</h2>
+          <h3>Using a Remote</h3>
+          <p>Your local repo must be told about a remote repo<p>
+          <pre><code data-trim>git add #{name} #{url}</code><code data-trim>git remote -v</code></pre>
+          <p>Create a local branch based on a remote branch</p>
+          <pre><code data-trim>git checkout -t origin/feature/cool-stuff</code></pre>
+          <p>Create a remote branch from your local branch</p>
+          <pre><code data-trim>git push --set-upstream #{remote} #{branch}</code></pre>
+        </section>
+
+        <section>
+          <h2>Remotes</h2>
+          <h3>Pushing / Pulling</h3>
           <p>Push a local branch to a remote branch</p>
+          <pre><code data-trim>git push #{remote} #{branch}</code></pre>
           <p>Pull a remote branch to a local branch</p>
-          <pre><code data-trim>git push ${remote} ${branch}</code><code data-trim>git pull ${remote} ${branch}</code></pre>
+          <pre><code data-trim>git pull #{remote} #{branch}</code></pre>
         </section>
 
         <section>
-          <h2>Github</h2>
+          <h2>Remotes</h2>
+          <h3>Github</h3>
           <p>Web view of Git repos, with point-and-click processes</p>
           <p>Users and their repos can be part of an organisation</p>
           <p style="font-weight: bold">It's just another remote</p>
